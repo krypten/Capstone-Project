@@ -9,6 +9,7 @@ public class VisionDBApi {
         public static final String IMAGE_URL = "http://img.visiondb.com/";
 
         public static final String PATH_FILTERS = "filter";
+        public static final String PATH_TRENDING = "trending";
     }
 
     public static final class RESPONSE {
