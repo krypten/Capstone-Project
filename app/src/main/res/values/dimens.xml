@@ -10,4 +10,6 @@
     <dimen name="separator_margin_top_bottom">16dp</dimen>
 
     <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="zero_dimension">0dp</dimen>
+    <integer name="grid_column_count">2</integer>
 </resources>

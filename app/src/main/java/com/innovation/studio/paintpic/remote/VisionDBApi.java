@@ -2,6 +2,8 @@ package com.innovation.studio.paintpic.remote;
 
 /**
  * Interfacing Class for visiondb.com API.
+ *
+ * @author Chaitanya Agrawal
  */
 public class VisionDBApi {
     public static final class Config {

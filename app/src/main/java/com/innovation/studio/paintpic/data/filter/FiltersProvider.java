@@ -1,4 +1,4 @@
-package com.innovation.studio.paintpic.data;
+package com.innovation.studio.paintpic.data.filter;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -11,14 +11,16 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.innovation.studio.paintpic.data.FiltersContract.FilterEntry;
-import com.innovation.studio.paintpic.data.FiltersContract.TrendingFilters;
+import com.innovation.studio.paintpic.data.filter.FiltersContract.FilterEntry;
+import com.innovation.studio.paintpic.data.filter.FiltersContract.TrendingFilters;
 
 import static com.innovation.studio.paintpic.remote.VisionDBApi.Config.PATH_FILTERS;
 import static com.innovation.studio.paintpic.remote.VisionDBApi.Config.PATH_TRENDING;
 
 /**
  * Content Provider for providing Filters.
+ *
+ * @author Chaitanya Agrawal
  */
 public class FiltersProvider extends ContentProvider {
     private static final String FILTER_ID_SELECTION = FilterEntry.TABLE_NAME + "." + FilterEntry._ID + " = ? ";

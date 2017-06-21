@@ -1,14 +1,16 @@
-package com.innovation.studio.paintpic.data;
+package com.innovation.studio.paintpic.data.filter;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.innovation.studio.paintpic.data.FiltersContract.FilterEntry;
-import com.innovation.studio.paintpic.data.FiltersContract.TrendingFilters;
+import com.innovation.studio.paintpic.data.filter.FiltersContract.FilterEntry;
+import com.innovation.studio.paintpic.data.filter.FiltersContract.TrendingFilters;
 
 /**
  * Filter's database class for creating db.
+ *
+ * @author Chaitanya Agrawal
  */
 public class FiltersDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "vision.db";

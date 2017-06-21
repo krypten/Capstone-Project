@@ -11,19 +11,27 @@ import com.innovation.studio.paintpic.R;
 
 /**
  * Main Activity displaying the content to the users.
+ *
+ * @author Chaitanya Agrawal
  */
 public class MainActivity extends AppCompatActivity {
-	public static boolean sIsLoggedIn = false;
+    public static boolean sIsLoggedIn = false;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		FacebookSdk.sdkInitialize(getApplicationContext());
-		AppEventsLogger.activateApp(this);
-		if (!sIsLoggedIn) {
-			startActivity(new Intent(this, LoginActivity.class));
-		}
-		Toast.makeText(this, "hi", Toast.LENGTH_LONG);
-	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+        if (!sIsLoggedIn) {
+            startActivity(new Intent(this, LoginActivity.class));
+        } else {
+            Toast.makeText(this, "hi", Toast.LENGTH_LONG);
+            if (savedInstanceState == null) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.activity_main, new ImageGridFragment())
+                        .commit();
+            }
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package com.innovation.studio.paintpic.data;
+package com.innovation.studio.paintpic.data.filter;
 
 import android.content.ContentResolver;
 import android.net.Uri;
@@ -8,6 +8,8 @@ import com.innovation.studio.paintpic.remote.VisionDBApi;
 
 /**
  * Filters' Contract for SQLite db.
+ *
+ * @author Chaitanya Agrawal
  */
 public class FiltersContract {
     // The "Content authority" is a name for the entire content provider, similar to the
