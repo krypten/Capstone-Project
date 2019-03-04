@@ -1,13 +1,20 @@
 package com.innovation.studio.paintpic.model;
 
+import android.graphics.drawable.Drawable;
+
 /**
- * Created by agrawac on 6/21/17.
+ * Image model to store image information.
+ *
+ * @author Chaitanya Agrawal
  */
-
 public class Image {
-    public String mUrl;
+    public Drawable mUrl;
 
-    public String getUrl() {
+    public Image(final Drawable url) {
+        mUrl = url;
+    }
+
+    public Drawable getUrl() {
         return mUrl;
     }
 }

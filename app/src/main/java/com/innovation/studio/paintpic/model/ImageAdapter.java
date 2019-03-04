@@ -1,6 +1,9 @@
 package com.innovation.studio.paintpic.model;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +13,9 @@ import android.widget.ImageView;
 
 import com.innovation.studio.paintpic.R;
 
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,8 +49,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final String url = mImageList.get(position).getUrl();
+        final Drawable url = mImageList.get(position).getUrl();
         Log.d(TAG, "image url : " + url);
+        holder.mImageView.setImageDrawable(url);
         // Glide.with(mContext).load().into(holder.mImageView);
     }
 

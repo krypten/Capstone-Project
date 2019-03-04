@@ -23,15 +23,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-        if (!sIsLoggedIn) {
-            startActivity(new Intent(this, LoginActivity.class));
-        } else {
+        //if (!sIsLoggedIn) {
+            // startActivity(new Intent(this, LoginActivity.class));
+        //} else {
             Toast.makeText(this, "hi", Toast.LENGTH_LONG);
             if (savedInstanceState == null) {
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.activity_main, new ImageGridFragment())
                         .commit();
             }
-        }
+        //}
     }
 }
